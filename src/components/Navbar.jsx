@@ -3,6 +3,7 @@ import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,11 +27,12 @@ const Navbar = () => {
       zIndex: 50,
       padding: '20px 0',
       transition: 'all 0.3s ease',
-      background: scrolled ? 'var(--glass-bg)' : 'transparent',
-      backdropFilter: scrolled ? 'var(--glass-blur)' : 'none',
-      borderBottom: scrolled ? '1px solid var(--glass-border)' : '1px solid transparent'
+      background: scrolled || isMobileMenuOpen ? 'var(--glass-bg)' : 'transparent',
+      backdropFilter: scrolled || isMobileMenuOpen ? 'var(--glass-blur)' : 'none',
+      borderBottom: scrolled || isMobileMenuOpen ? '1px solid var(--glass-border)' : '1px solid transparent'
     }}>
       <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        
         <a href="#home" style={{ display: 'flex', alignItems: 'center', gap: '15px', textDecoration: 'none' }}>
           <img src="/logo.png" alt="Neon Logo" style={{ height: '50px', transform: 'translateY(-4px)', filter: 'drop-shadow(0 0 8px rgba(255,42,77,0.5))' }} />
           <span style={{
@@ -61,7 +63,49 @@ const Navbar = () => {
           ))}
           <a href="#contact" className="btn-primary red">Contact</a>
         </div>
+
+        {/* Mobile Menu Button - Right Side */}
+        <button 
+          className="mobile-menu-btn"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          style={{ 
+            background: 'transparent', 
+            border: 'none', 
+            color: 'var(--text-primary)', 
+            cursor: 'pointer',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '0'
+          }}
+        >
+          {isMobileMenuOpen ? <X size={32} /> : <Menu size={32} />}
+        </button>
       </div>
+
+      {/* Mobile Menu Dropdown */}
+      {isMobileMenuOpen && (
+        <div className="mobile-nav-menu">
+          {navLinks.map((link) => (
+            <a 
+              key={link.name} 
+              href={link.href} 
+              className="mobile-nav-link"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              {link.name}
+            </a>
+          ))}
+          <a 
+            href="#contact" 
+            className="btn-primary red" 
+            style={{ textAlign: 'center', marginTop: '10px' }}
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Contact
+          </a>
+        </div>
+      )}
     </nav>
   );
 };
