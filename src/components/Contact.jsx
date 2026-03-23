@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { Send } from 'lucide-react';
 
-// === 📧 SETTINGS: CHANGE THE EMAIL ADDRESS BELOW ===
-// Any messages sent from the Contact form will go directly to this email address.
+
 const OWNER_EMAIL = "dsenura.lk@gmail.com";
 
 const Contact = () => {
@@ -15,7 +14,7 @@ const Contact = () => {
     try {
       const res = await fetch(`https://formsubmit.co/ajax/${OWNER_EMAIL}`, {
         method: 'POST',
-        headers: { 
+        headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         },

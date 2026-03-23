@@ -42,17 +42,7 @@ const Works = () => {
         }}>
           {loopedItems.map((item, idx) => (
             <div key={idx}
-              className="glass"
-              style={{
-                flex: '0 0 auto',
-                width: '320px',
-                height: '240px',
-                margin: '0 5px',
-                borderRadius: '16px',
-                border: '1px solid rgba(255,255,255,0.4)',
-                overflow: 'hidden',
-                position: 'relative'
-              }}>
+              className="glass carousel-item">
               <img src={item.image} style={{ width: '100%', height: '100%', objectFit: 'cover' }} alt="Neon Work" />
             </div>
           ))}

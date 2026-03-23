@@ -55,8 +55,8 @@ const Hero = () => {
           Elegant Neon Lighting for Modern Brands and Bold Spaces.
         </p>
 
-        <div className="floating" style={{ animationDelay: '0.5s' }}>
-          <a href="#works" className="btn-primary" style={{ padding: '16px 36px', fontSize: '1.1rem', marginRight: '20px' }}>Explore Works</a>
+        <div className="hero-buttons-container floating" style={{ animationDelay: '0.5s' }}>
+          <a href="#works" className="btn-primary" style={{ padding: '16px 36px', fontSize: '1.1rem' }}>Explore Works</a>
           <a href="#contact" className="btn-primary red" style={{ padding: '16px 36px', fontSize: '1.1rem' }}>Get Custom Light</a>
         </div>
       </div>

@@ -181,3 +181,39 @@ section {
   border-bottom: none;
   margin-bottom: 5px;
 }
+
+/* Hero & Carousel Responsive Styles */
+.hero-buttons-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  width: 320px;
+  height: 240px;
+  margin: 0 5px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.4);
+  overflow: hidden;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .hero-buttons-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .hero-buttons-container a {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .carousel-item {
+    width: 200px;
+    height: 150px;
+  }
+}
