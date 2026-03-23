@@ -6,7 +6,7 @@ const About = () => {
     {
       icon: <Sparkles size={32} color="var(--neon-blue)" />,
       title: 'Antigravity Design',
-      desc: 'Our pieces appear to float effortlessly, using state-of-the-art mounting tech to create true depth.',
+      desc: 'Our pieces appear to float effortlessly, using state of the art mounting tech to create true depth.',
     },
     {
       icon: <Zap size={32} color="var(--neon-red)" />,
