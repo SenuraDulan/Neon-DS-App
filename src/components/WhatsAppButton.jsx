@@ -8,7 +8,7 @@ const WhatsAppButton = () => {
     } catch (err) {
       console.error('Error logging WhatsApp click:', err);
     }
-    window.open('https://wa.me/+94750875441?text=Hello%20NeonDS,%20I%20am%20interested%20in%20a%20custom%20neon%20sign.', '_blank');
+    window.open('https://wa.me/+94771338509?text=Hello%20NeonDS,%20I%20am%20interested%20in%20a%20custom%20neon%20sign.', '_blank');
   };
 
   return (
