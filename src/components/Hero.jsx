@@ -1,4 +1,5 @@
 import React from 'react';
+import DottedBackground from './DottedBackground';
 
 const Hero = () => {
   return (
@@ -9,8 +10,10 @@ const Hero = () => {
       justifyContent: 'center',
       textAlign: 'center',
       paddingTop: '80px', // offset for navbar
-      overflow: 'hidden'
+      overflow: 'hidden',
+      position: 'relative'
     }}>
+      <DottedBackground />
       <div className="container" style={{ position: 'relative', zIndex: 10 }}>
         
         {/* Floating 3D text */}
