@@ -39,7 +39,7 @@ const Footer = () => {
                   } catch (err) {
                     console.error('Failed to log click');
                   }
-                  window.open('https://wa.me/+94750875441?text=I%20am%20interested%20in%20a%20NeonDS%20sign!', '_blank');
+                  window.open('https://wa.me/+94771338509?text=I%20am%20interested%20in%20a%20NeonDS%20sign!', '_blank');
                 }
               }}
               style={{
