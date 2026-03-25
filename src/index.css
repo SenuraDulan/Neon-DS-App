@@ -217,3 +217,34 @@ section {
     height: 150px;
   }
 }
+
+/* Mouse Trail Effect */
+.mouse-trail-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+@keyframes mouse-trail-color {
+  0%, 100% {
+    background-color: var(--neon-blue);
+    box-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue);
+  }
+  50% {
+    background-color: var(--neon-red);
+    box-shadow: 0 0 10px var(--neon-red), 0 0 20px var(--neon-red);
+  }
+}
+
+.mouse-trail-dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: mouse-trail-color 3s infinite ease-in-out;
+}
