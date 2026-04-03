@@ -1,5 +1,4 @@
 import React from 'react';
-import DottedBackground from './DottedBackground';
 
 const Hero = () => {
   return (
@@ -11,11 +10,14 @@ const Hero = () => {
       textAlign: 'center',
       paddingTop: '80px', // offset for navbar
       overflow: 'hidden',
-      position: 'relative'
+      position: 'relative',
+      backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url("/hero-img.jpg")',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat'
     }}>
-      <DottedBackground />
       <div className="container" style={{ position: 'relative', zIndex: 10 }}>
-        
+
         {/* Floating 3D text */}
         <div className="floating" style={{ marginBottom: '10px' }}>
           <h1 style={{
@@ -35,7 +37,7 @@ const Hero = () => {
             <span style={{ color: 'var(--neon-red)', textShadow: '0 0 15px var(--neon-red)' }}>Neon</span>
             <span style={{ color: 'var(--neon-blue)', textShadow: '0 0 15px var(--neon-blue)' }}>DS</span>
           </h1>
-          
+
           {/* Subtle reflection underneath */}
           <div style={{
             height: '20px',

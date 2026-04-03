@@ -38,16 +38,18 @@ const About = () => {
             {cards.map((card, idx) => (
               <div key={idx} className="glass" style={{
                 padding: '40px',
-                transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-                cursor: 'pointer'
+                borderRadius: '16px',
+                border: '1px solid var(--glass-border)',
+                transition: 'transform 0.3s ease, border-color 0.3s ease',
+                cursor: 'default'
               }}
                 onMouseOver={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-20px)';
-                  e.currentTarget.style.boxShadow = 'var(--shadow-blue)';
+                  e.currentTarget.style.transform = 'translateY(-5px)';
+                  e.currentTarget.style.borderColor = idx % 2 === 0 ? 'var(--neon-blue)' : 'var(--neon-red)';
                 }}
                 onMouseOut={(e) => {
-                  e.currentTarget.style.transform = 'none';
-                  e.currentTarget.style.boxShadow = 'none';
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.borderColor = 'var(--glass-border)';
                 }}>
                 <div style={{
                   width: '64px', height: '64px',
@@ -107,7 +109,7 @@ const About = () => {
                 Founded by visionary designer Dhammika Ranathunga, NeonDS started as a small underground studio in Moratuwa, Sri Lanka. Dissatisfied with standard commercial lighting, Dhammika set out to create glass signs that felt like weightless, glowing sculptures rather than mere fixtures.
               </p>
               <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', marginBottom: '40px', lineHeight: 1.8 }}>
-                Today, our workshop houses elite glassbenders and LED technicians who assemble each piece by hand. We've transformed spaces ranging from cyber-cafes and ultra-modern corporate lobbies to private luxury lounges worldwide.
+                Today, our workshop houses elite glassbenders and LED technicians who assemble each piece by hand. We've transformed spaces ranging from cyber cafes and ultra modern corporate lobbies to private luxury lounges islandwide.
               </p>
 
               {/* Stats / Info Grid */}
